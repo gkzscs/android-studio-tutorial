@@ -28,6 +28,7 @@ class AlertDialogActivity : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(this, "算了吧，你个坑货", Toast.LENGTH_SHORT).show()
             })
 
+        builder.setView(R.layout.activity_radio_btn)
         val ad = builder.create()
         ad.show()
     }
