@@ -1,6 +1,7 @@
 package com.example.tutorial
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -66,6 +67,24 @@ class RecyclerViewActivity : Activity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.i("RecyclerViewActivity","销毁")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("RecyclerViewActivity", "重启")
+    }
+
+    fun back(view: View) {
+        var intent = Intent()
+
+        var bundle = Bundle()
+        bundle.putString("msg", "Hello, my dear friend!")
+        intent.putExtras(bundle)
+
+        setResult(200, intent)
+        finish()
+//        intent.setClass(this, LifeCycleActivity::class.java)
+//        startActivity(intent)
     }
 
     // Embed class
