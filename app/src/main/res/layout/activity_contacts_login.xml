@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <CheckBox
-                android:id="@+id/tv_remember_password"
+                android:id="@+id/chk_remember_password"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
